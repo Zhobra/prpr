@@ -7,4 +7,4 @@ install:
  - pip3 install requests
 script:
  - cd flaskapp
- - ./st.sh
+ - st.sh
