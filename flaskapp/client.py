@@ -1,6 +1,10 @@
+import requests
+r = requests.get('http://localhost:5000/')
+print(r.status_code)
+print(r.text)
+
 # импортируем нужные модули
 import os
-import requests
 from io import BytesIO 
 import base64
 img_data = None
