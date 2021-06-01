@@ -94,18 +94,22 @@ import json
 # метод для обработки запроса от пользователя
 @app.route("/apinet",methods=['GET', 'POST'])
 def apinet():
+ print("1")
  neurodic = {}
  # проверяем что в запросе json данные
  if request.mimetype == 'application/json': 
   # получаем json данные
+  print(request.text)
   data = request.get_json()
   # берем содержимое по ключу, где хранится файл
   # закодированный строкой base64
   # декодируем строку в массив байт, используя кодировку utf-8
   # первые 128 байт ascii и utf-8 совпадают, потому можно
+  print(data)
   filebytes = data['imagebin'].encode('utf-8')
   # декодируем массив байт base64 в исходный файл изображение
   cfile = base64.b64decode(filebytes)
+  print("4")
   # чтобы считать изображение как файл из памяти используем BytesIO
   img = Image.open(BytesIO(cfile))
   decode = neuronet.getresult([img])
