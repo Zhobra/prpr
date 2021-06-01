@@ -47,8 +47,9 @@ def getresult(image_box):
  images_resized = [[]]*files_count
  # нормализуем изображения и преобразуем в numpy
  for i in range(files_count):
-  images_resized[i] = preprocess_input(image_box[i])
+  images_resized[i] =  np.array(image_box[i].resize((height,width)))
  images_resized = np.array(images_resized)
+ images_resized = preprocess_input(images_resized)
  # подаем на вход сети изображение в виде numpy массивов
  out_net = resnet.predict(images_resized) 
  # декодируем ответ сети в один распознанный класс top=1 (можно больше классов)
