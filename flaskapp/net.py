@@ -6,7 +6,7 @@ from keras.layers import Input
 from keras.models import Model
 # одна из предобученных сетей
 from keras.applications import MobileNetV2
-from keras.applications.mobilenet import preprocess_input, decode_predictions 
+from keras.applications.mobilenet_v2 import preprocess_input, decode_predictions 
 import os
 # модуль работы с изображениями
 from PIL import Image
