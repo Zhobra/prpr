@@ -99,7 +99,7 @@ def apinet():
  # проверяем что в запросе json данные
  if request.mimetype == 'application/json': 
   # получаем json данные
-  print(request.text)
+  print(request.__dir__())
   data = request.get_json()
   # берем содержимое по ключу, где хранится файл
   # закодированный строкой base64
