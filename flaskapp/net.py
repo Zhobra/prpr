@@ -28,7 +28,7 @@ ncol=3
 visible2 = Input(shape=(nh,nw,ncol),name = 'imginp')
 resnet = MobileNetV2(include_top=True,
 weights="imagenet", input_tensor=visible2,
-input_shape=None, pooling=None, classes=1000)
+input_shape=None, pooling=None, classes=1000, compile=False)
 # чтение изображений из каталога
 # учтите, если там есть файлы не соответствующие изображениям или каталоги
 # возникнет ошибка
