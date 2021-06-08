@@ -5,8 +5,8 @@ import keras
 from keras.layers import Input
 from keras.models import Model
 # одна из предобученных сетей
-from keras.applications import MobileNetV2
-from keras.applications.mobilenet_v2 import preprocess_input, decode_predictions 
+from keras.applications import DenseNet121
+from keras.applications.densenet import preprocess_input, decode_predictions 
 import os
 # модуль работы с изображениями
 from PIL import Image
@@ -26,9 +26,9 @@ nw=224
 ncol=3
 # загружаем и создаем стандартную уже обученную сеть keras
 visible2 = Input(shape=(nh,nw,ncol),name = 'imginp')
-resnet = MobileNetV2(include_top=True,
+resnet = DenseNet121(include_top=True,
 weights="imagenet", input_tensor=visible2,
-input_shape=None, pooling=None, classes=1000, compile=False)
+input_shape=None, pooling=None, classes=1000)
 # чтение изображений из каталога
 # учтите, если там есть файлы не соответствующие изображениям или каталоги
 # возникнет ошибка
