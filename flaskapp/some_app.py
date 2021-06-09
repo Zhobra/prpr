@@ -29,7 +29,7 @@ from flask_wtf.file import FileField, FileAllowed, FileRequired
 SECRET_KEY = 'secret'
 app.config['SECRET_KEY'] = SECRET_KEY
 # используем капчу и полученные секретные ключи с сайта google 
-app.config['RECAPTCHA_USE_SSL'] = False
+app.config['RECAPTCHA_USE_SSL'] = True
 app.config['RECAPTCHA_PUBLIC_KEY'] = '6LePmPcaAAAAAKXAXLkMwCeyDvMBnrSgbNKJySUa'
 app.config['RECAPTCHA_PRIVATE_KEY'] = '6LePmPcaAAAAAPXIblJMnnmnzRcYtu6fLluxlYHg'
 app.config['RECAPTCHA_OPTIONS'] = {'theme': 'white'}
