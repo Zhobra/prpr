@@ -4,9 +4,9 @@ import random
 from keras.layers import Input
 from keras.models import Model
 # одна из предобученных сетей
-from tensorflow.keras.applications.resnet50 import ResNet50
-from tensorflow.keras.preprocessing import image
-from tensorflow.keras.applications.resnet50 import preprocess_input, decode_predictions
+from keras.applications.resnet50 import ResNet50
+from keras.preprocessing import image
+from keras.applications.resnet50 import preprocess_input, decode_predictions
 import os
 # модуль работы с изображениями
 from PIL import Image
