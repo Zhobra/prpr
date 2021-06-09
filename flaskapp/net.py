@@ -1,6 +1,5 @@
 import random
 # бибилиотека keras для НС
-import keras
 # входной слой сети и модель сети
 from keras.layers import Input
 from keras.models import Model
